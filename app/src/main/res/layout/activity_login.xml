@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_blue_to_sky"
+    tools:context="com.example.dvidd.loginsecurity.activity.LoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <!-- search moving -->
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottieAnimationView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="-46dp"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="animation-bus3.json"
+            app:lottie_loop="true" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#8AC348"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <com.example.dvidd.loginsecurity.widget.FontText
+        android:id="@+id/title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:text="CIBER - TEC"
+        android:textColor="#ffffff"
+        android:textSize="38sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:typeface="BrandonText-Black.otf" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="36dp"
+        android:layout_marginBottom="36dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    app:srcCompat="@drawable/ic_user" />
+
+                <com.example.dvidd.loginsecurity.widget.FontText
+                    android:id="@+id/prefix_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:typeface="NunitoSans-Light.ttf"
+                    android:textSize="18sp"
+                    android:textColor="@color/white"
+                    android:text="i"/>
+
+                <com.example.dvidd.loginsecurity.widget.FontEdit
+                    android:id="@+id/user_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Usuario"
+                    android:inputType="number"
+                    app:typeface="NunitoSans-Light.ttf"
+                    android:textCursorDrawable="@null"
+                    android:textColorHint="@color/white80"
+                    android:maxLength="9"
+                    android:maxLines="1"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/clear_id_btn"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:visibility="invisible"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginLeft="6dp"
+                    android:background="@drawable/ic_cancel" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp"
+                android:layout_marginTop="4dp"
+                android:background="@color/white" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_password" />
+
+                <com.example.dvidd.loginsecurity.widget.FontEdit
+                    android:id="@+id/pass_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_weight="1"
+                    app:typeface="NunitoSans-Light.ttf"
+                    android:textColorHint="@color/white80"
+                    android:lines="1"
+                    android:longClickable="false"
+                    android:textCursorDrawable="@null"
+                    android:hint="Clave"
+                    android:inputType="textPassword"
+                    android:background="@null"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/clear_pass_btn"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:visibility="invisible"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginLeft="6dp"
+                    android:background="@drawable/ic_cancel" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp"
+                android:layout_marginTop="4dp"
+                android:background="@color/white" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/login_btn"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:textAllCaps="false"
+            android:text="Ingresar"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_gravity="center"
+            android:textColor="#40C4FF"
+            android:textSize="18sp"
+            android:background="@drawable/shape_white"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/recover_text"
+        android:clickable="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="@color/white"
+        android:layout_marginBottom="16dp"
+        android:text="¿Olvidaste tu clave?"/>
+
+
+</android.support.constraint.ConstraintLayout>
